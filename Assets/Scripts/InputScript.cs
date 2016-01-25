@@ -30,6 +30,11 @@ public class InputScript : MonoBehaviour
 
     void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    //Exit.quitMenu.enabled = true;
+        //    Application.Quit();
+        //}
         savep1 = PlayerPrefs.GetString("P1 Enter Name");
         savep2 = PlayerPrefs.GetString("P2 Enter Name");
 
