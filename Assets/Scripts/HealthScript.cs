@@ -9,7 +9,6 @@ public class HealthScript : MonoBehaviour {
     public int currentHealth;
     public Slider healthSlider;
     
-    bool isDead;
 
 	// Use this for initialization
 	void Start ()
@@ -26,9 +25,13 @@ public class HealthScript : MonoBehaviour {
         //Set the health bar's value to the current health
         healthSlider.value = currentHealth;
     }
-	//// Update is called once per frame
-	//void Update ()
- //   {
-	  
-	//}
+
+    //// Update is called once per frame
+    void Update()
+    {
+        if(healthSlider.value == 0)
+        {//Player Dies Here
+
+        }
+    }
 }

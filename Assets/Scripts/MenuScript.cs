@@ -33,7 +33,7 @@ public class MenuScript : MonoBehaviour {
         quitMenu.enabled = false;
         playText.enabled = true;
         exitText.enabled = true;
-
+        
     }
     //When You Click The Play Button
     public void StartGame()
