@@ -9,7 +9,6 @@ public class HealthScript : MonoBehaviour {
     public int currentHealth;
     public Slider healthSlider;
     
-    bool isDead;
 
 	// Use this for initialization
 	void Start ()
