@@ -21,6 +21,7 @@ public class MenuScript : MonoBehaviour {
         playText = playText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         howtoText = howtoText.GetComponent<Button>();
+
         quitMenu.enabled = false;
         howtoMenu.enabled = false;
 
@@ -70,14 +71,4 @@ public class MenuScript : MonoBehaviour {
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //Allows the quit menu to be displayed
-            quitMenu.enabled = true;
-
-        }
-    }
 }
