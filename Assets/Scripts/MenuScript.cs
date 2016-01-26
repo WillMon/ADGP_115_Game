@@ -5,8 +5,10 @@ using System.Collections;
 public class MenuScript : MonoBehaviour {
 
     public Canvas quitMenu;
+    public Canvas howtoMenu;
     public Button playText;
     public Button exitText;
+    public Button howtoText;
     
 
 	// Use this for initialization
@@ -14,9 +16,14 @@ public class MenuScript : MonoBehaviour {
     {
         //Getting components allow the interaction to happen in the inspector between objects
         quitMenu = quitMenu.GetComponent<Canvas>();
+        howtoMenu = howtoMenu.GetComponent<Canvas>();
+
         playText = playText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
+        howtoText = howtoText.GetComponent<Button>();
         quitMenu.enabled = false;
+        howtoMenu.enabled = false;
+
     }
 	
 
@@ -26,6 +33,7 @@ public class MenuScript : MonoBehaviour {
         //Displays the buttons
         playText.enabled = false;
         exitText.enabled = false;
+        howtoText.enabled = false;
     }
 
     public void NoPress()
@@ -33,8 +41,23 @@ public class MenuScript : MonoBehaviour {
         quitMenu.enabled = false;
         playText.enabled = true;
         exitText.enabled = true;
-
+        howtoText.enabled = true;
     }
+
+    public void GoBack()
+    {
+        howtoMenu.enabled = false;
+
+        playText.enabled = true;
+        exitText.enabled = true;
+        howtoText.enabled = true;
+    }
+
+    public void HowToPress()
+    {
+        howtoMenu.enabled = true;
+    }
+
     //When You Click The Play Button
     public void StartGame()
     {

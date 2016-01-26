@@ -29,9 +29,9 @@ public class HealthScript : MonoBehaviour {
     //// Update is called once per frame
     void Update()
     {
-        if(healthSlider.value == 0)
-        {//Player Dies Here
+        //if(healthSlider.value == 0)
+        //{//Player Dies Here
 
-        }
+        //}
     }
 }
