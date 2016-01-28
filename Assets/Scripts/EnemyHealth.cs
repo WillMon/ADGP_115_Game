@@ -26,13 +26,20 @@ public class EnemyHealth : MonoBehaviour {
     }
     void Dead() { 
 
-    isDead = true;
+        isDead = true;
 
-    //anim.SetTrigger("Die");
 
-    enemyMove.enabled = false; }
-// Update is called once per frame
-void Update () {
+        //anim.SetTrigger("Die");
+
+        enemyMove.enabled = false;
+
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+    
+        Destroy(gameObject, 2f);
+    }
+   // Update is called once per frame
+    void Update () {
 	    
 	}
 }

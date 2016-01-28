@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour {
 
     GameObject player1;
     GameObject player2;
+  
     HealthScript playerScript;
     EnemyHealth enemyScript;
     //Animator anim;
