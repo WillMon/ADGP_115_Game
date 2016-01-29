@@ -55,6 +55,7 @@ GameObject:
   - 114: {fileID: 11486188}
   - 54: {fileID: 5494900}
   - 114: {fileID: 11499104}
+  - 114: {fileID: 11406464}
   m_Layer: 0
   m_Name: P1
   m_TagString: Player
@@ -289,6 +290,20 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a0a12e2ccc0e449992f42e332a8ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 20
+  timeBetweenBullets: 0.15
+  range: 100
+--- !u!114 &11406464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193194}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a0a12e2ccc0e449992f42e332a8ae6, type: 3}

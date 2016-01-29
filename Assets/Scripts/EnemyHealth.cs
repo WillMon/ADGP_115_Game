@@ -17,8 +17,16 @@ public class EnemyHealth : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+
+        if (isDead)
+        {// ... no need to take damage so exit the function
+            return;
+        }
+
+        // Reduce the current health by the amount of damage sustained.
         currentHealth -= damage;
-        if (currentHealth == 0)
+
+        if (currentHealth <= 0)
         {
             Dead();
         }

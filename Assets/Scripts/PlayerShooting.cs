@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour {
     LineRenderer gunLine;
     Light gunLight;
     float effectiveDisplayTime = 0.2f;
+
 	// Use this for initialization
 	void Start () {
         shootableMask = LayerMask.GetMask("Shootable");
@@ -24,6 +25,10 @@ public class PlayerShooting : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        //Add the time since Update was last called to the timer
+        timer += Time.deltaTime;
+
         // if palyer presses the left shit player 1 will shoot 
         if (Input.GetButton("Fire2") && timer >= timeBetweenBullets)
         {
@@ -33,7 +38,8 @@ public class PlayerShooting : MonoBehaviour {
         if (timer >= timeBetweenBullets * effectiveDisplayTime)
         {
             DisableEffect();
-        } }
+        }
+    }
 
     // Disables the detection line if its not being used 
     public void DisableEffect()

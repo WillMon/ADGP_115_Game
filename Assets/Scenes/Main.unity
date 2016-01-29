@@ -526,7 +526,7 @@ MonoBehaviour:
     count: 10
     rate: 1
   - name: Got'eeem
-    enemy: {fileID: 402586, guid: 148776b938d9a9d48920ac7eba33e7fe, type: 2}
+    enemy: {fileID: 491846, guid: 9955723b6f1c71f44851705204f17736, type: 2}
     count: 5
     rate: 1
   spawnPoints:
@@ -3051,11 +3051,8 @@ Prefab:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 786013536}
-    - target: {fileID: 10853738, guid: 0e3d2cc21990e2f419e10c1abc6e464c, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11406464, guid: 0e3d2cc21990e2f419e10c1abc6e464c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0e3d2cc21990e2f419e10c1abc6e464c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1852446133

@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
     {
   
 
-        if (Input.GetKey("a"))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-
-            transform.Rotate( new Vector3(0, 270, 0));
-           
+            Quaternion TurnsAround = transform.rotation;
+            TurnsAround.y = 90f;
+            transform.rotation = TurnsAround;
 
             
         }
