@@ -3,8 +3,9 @@
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;            
-    Vector3 movement;                  
-    //Animator anim;                      
+    Vector3 movement;
+    //Animator anim;          
+    Vector3 playerMoves;            
     Rigidbody rbody;          
     int floorMask;                     
     float camRayLength = 100f;          
@@ -43,17 +44,14 @@ public class PlayerMovement : MonoBehaviour
     void Turning()
     {
   
-        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit floorHit;
 
-        if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
+        if (Input.GetKey("a"))
         {
 
-            Vector3 playerToMouse = floorHit.point - transform.position;
-            playerToMouse.y = 0f;
+            transform.Rotate( new Vector3(0, 270, 0));
+           
 
-            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-            rbody.MoveRotation(newRotation);
+            
         }
     }
 

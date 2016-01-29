@@ -15,10 +15,9 @@ public class EnemyHealth : MonoBehaviour {
         //anim = GetComponent<Animator>();
 }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
         if (currentHealth == 0)
         {
             Dead();
