@@ -21,7 +21,7 @@ public class PlayerMovement2 : MonoBehaviour {
         float h = Input.GetAxisRaw("Horizontal2");
         float v = Input.GetAxisRaw("Vertical2");
         Move(h, v);
-        Turning();
+        //Turning();
         //Animating(h, v);
     }
 

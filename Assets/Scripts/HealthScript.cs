@@ -9,12 +9,14 @@ public class HealthScript : MonoBehaviour {
     public int currentHealth;
     //Allows access to Slider object
     public Slider healthSlider;
+    public GameObject player;
     
 
 	// Use this for initialization
 	void Start ()
     {//sets currentHealth to startingHealth
         currentHealth = startingHealth;
+        player = gameObject;
 	}
 	
     //Function called when something has taken damage
@@ -30,9 +32,9 @@ public class HealthScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {//if the healthSlider has a value of 0...
-        if (healthSlider.value == 0)
-        {//Player Dies Here
-
+        if (healthSlider.value <= 0)
+        {
+            Destroy(player);
         }
     }
 }
