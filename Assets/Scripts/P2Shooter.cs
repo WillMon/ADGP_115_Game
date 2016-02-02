@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerShooting : MonoBehaviour {
+public class P2Shooter : MonoBehaviour {
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
@@ -15,26 +15,28 @@ public class PlayerShooting : MonoBehaviour {
     Light gunLight;
     float effectiveDisplayTime = 0.2f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         shootableMask = LayerMask.GetMask("Shootable");
         gunPartical = GetComponent<ParticleSystem>();
         gunLine = GetComponent<LineRenderer>();
         gunLight = GetComponent<Light>();
-	}
+    }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
         //Add the time since Update was last called to the timer
         timer += Time.deltaTime;
 
         // if player presses the left shift player 1 will shoot 
-        if (Input.GetButton("Fire1") && timer >= timeBetweenBullets)
+        if (Input.GetButton("Fire2") && timer >= timeBetweenBullets)
         {
             Shoot();
         }
-        
+
 
         if (timer >= timeBetweenBullets * effectiveDisplayTime)
         {
@@ -79,5 +81,5 @@ public class PlayerShooting : MonoBehaviour {
             gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
         }
     }
-	
+
 }

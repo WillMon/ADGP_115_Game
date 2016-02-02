@@ -16,6 +16,7 @@ GameObject:
   - 198: {fileID: 19828662}
   - 199: {fileID: 19955536}
   - 108: {fileID: 10810038}
+  - 114: {fileID: 11491894}
   m_Layer: 0
   m_Name: Gunbarrel
   m_TagString: Untagged
@@ -55,7 +56,7 @@ GameObject:
   - 114: {fileID: 11458674}
   - 54: {fileID: 5452118}
   - 114: {fileID: 11434788}
-  - 114: {fileID: 11494462}
+  - 136: {fileID: 13691362}
   m_Layer: 0
   m_Name: P2
   m_TagString: Player2
@@ -310,7 +311,8 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
---- !u!114 &11494008
+  player: {fileID: 190764}
+--- !u!114 &11491894
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -324,12 +326,12 @@ MonoBehaviour:
   damagePerShot: 20
   timeBetweenBullets: 0.15
   range: 100
---- !u!114 &11494462
+--- !u!114 &11494008
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190764}
+  m_GameObject: {fileID: 120376}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a0a12e2ccc0e449992f42e332a8ae6, type: 3}
@@ -368,8 +370,8 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: 0.05
-    endWidth: 0.05
+    startWidth: 1
+    endWidth: 1
     m_StartColor:
       serializedVersion: 2
       rgba: 4294967295
@@ -377,6 +379,19 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4294967295
   m_UseWorldSpace: 1
+--- !u!136 &13691362
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 1.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19828662
 ParticleSystem:
   m_ObjectHideFlags: 1
