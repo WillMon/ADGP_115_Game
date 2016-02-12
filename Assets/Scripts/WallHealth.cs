@@ -4,7 +4,7 @@ using System.Collections;
 
 public class WallHealth : MonoBehaviour {
     // Starting Wall health 
-    public int startingHealth = 100;
+    public int startingHealth = 1000;
     public int currentHP;
     public Slider armorSlider;
     public GameObject Wall;

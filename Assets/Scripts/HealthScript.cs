@@ -35,6 +35,7 @@ public class HealthScript : MonoBehaviour {
         if (healthSlider.value <= 0)
         {
             Destroy(player);
+            player = null;
         }
     }
 }

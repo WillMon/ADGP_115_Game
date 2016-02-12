@@ -3,12 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Winner : MonoBehaviour
-{
+{ 
 
     public Canvas PlayAgain;
 
     HealthScript player;
-
+    PauseScript pauseGame;
     public GameObject p1;
     public GameObject p2;
     public Text winningText;
@@ -18,22 +18,36 @@ public class Winner : MonoBehaviour
     {
         PlayAgain.GetComponent<Canvas>();
 
+        pauseGame = GetComponent<PauseScript>();
         PlayAgain.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (p1 != null)
+        {
+            if (p1.gameObject.GetComponent<HealthScript>().currentHealth <= 0 && p2.gameObject.GetComponent<HealthScript>().currentHealth > 0)
+            {
+                winningText.text = "Player 2 Wins!";
+                pauseGame.pauseText.text = " ";
+                pauseGame.paused = true;
+               
+                PlayAgain.enabled = true;
 
-        if (p1.gameObject.GetComponent<HealthScript>().currentHealth <= 0 && p2.gameObject.GetComponent<HealthScript>().currentHealth > 0)
-        {
-            winningText.text = "Player 2 Wins!";
-            PlayAgain.enabled = true;
+            }
         }
-        else if (p2.gameObject.GetComponent<HealthScript>().currentHealth <= 0 && p1.gameObject.GetComponent<HealthScript>().currentHealth > 0)
-        {
-            winningText.text = "Player 1 Wins!";
-            PlayAgain.enabled = true;
+
+        if ( p2 != null)
+        { 
+                if (p2.gameObject.GetComponent<HealthScript>().currentHealth <= 0 && p1.gameObject.GetComponent<HealthScript>().currentHealth > 0)
+            {
+                winningText.text = "Player 1 Wins!";
+                pauseGame.pauseText.text = " ";
+                pauseGame.paused = true;
+                PlayAgain.enabled = true;
+                
+            }
         }
     }
 

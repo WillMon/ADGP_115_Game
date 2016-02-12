@@ -16,6 +16,7 @@ public class InGameMenus : MonoBehaviour {
         quitMenu = quitMenu.GetComponent<Canvas>();
         howtoMenu = howtoMenu.GetComponent<Canvas>();
 
+    
         quitMenu.enabled = false;
         howtoMenu.enabled = false;
     }
@@ -43,13 +44,14 @@ public class InGameMenus : MonoBehaviour {
         {
             //Allows the quit menu to be displayed
             quitMenu.enabled = true;
-
         }
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             
             howtoMenu.enabled = true;
+           
+
         }
     }
 }

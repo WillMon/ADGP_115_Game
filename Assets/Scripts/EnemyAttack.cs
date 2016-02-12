@@ -87,20 +87,26 @@ public class EnemyAttack : MonoBehaviour
         if ((time >= timeBetweenAttacks) && playerInRange1 && enemyScript.currentHealth > 0)
         {
             time = 0f;
-            if (player1.GetComponent<HealthScript>().currentHealth > 0)
+            if (player1 != null)
             {
-                //playerScript.TakeDamage(attackDmg);
-                player1.GetComponent<HealthScript>().TakeDamage(attackDmg);
+                if (player1.GetComponent<HealthScript>().currentHealth > 0)
+                {
+                    //playerScript.TakeDamage(attackDmg);
+                    player1.GetComponent<HealthScript>().TakeDamage(attackDmg);
+                }
             }
         }
 
         if ((time >= timeBetweenAttacks) && playerInRange2 && enemyScript.currentHealth > 0)
         {
             time = 0f;
-            if (player2.GetComponent<HealthScript>().currentHealth > 0)
+            if (player2 != null)
             {
-                //playerScript.TakeDamage(attackDmg);
-                player2.GetComponent<HealthScript>().TakeDamage(attackDmg);
+                if (player2.GetComponent<HealthScript>().currentHealth > 0)
+                {
+                    //playerScript.TakeDamage(attackDmg);
+                    player2.GetComponent<HealthScript>().TakeDamage(attackDmg);
+                }
             }
         }
 
@@ -108,20 +114,26 @@ public class EnemyAttack : MonoBehaviour
         if ((time >= timeBetweenAttacks) && WallInRange1 && enemyScript.currentHealth > 0)
         {
             time = 0f;
-            if (Wall1.GetComponent<WallHealth>().currentHP > 0)
+            if (Wall1 != null)
             {
-                //playerScript.TakeDamage(attackDmg);
-                Wall1.GetComponent<WallHealth>().TakeDmg(attackDmg);
+                if (Wall1.GetComponent<WallHealth>().currentHP > 0)
+                {
+                    //playerScript.TakeDamage(attackDmg);
+                    Wall1.GetComponent<WallHealth>().TakeDmg(attackDmg);
+                }
             }
         }
 
         if ((time >= timeBetweenAttacks) && WallInRange2 && enemyScript.currentHealth > 0)
         {
             time = 0f;
-            if (Wall2.GetComponent<WallHealth>().currentHP > 0)
+            if (Wall2 != null)
             {
-                //playerScript.TakeDamage(attackDmg);
-                Wall2.GetComponent<WallHealth>().TakeDmg(attackDmg);
+                if (Wall2.GetComponent<WallHealth>().currentHP > 0)
+                {
+                    //playerScript.TakeDamage(attackDmg);
+                    Wall2.GetComponent<WallHealth>().TakeDmg(attackDmg);
+                }
             }
         }
 
@@ -134,21 +146,5 @@ public class EnemyAttack : MonoBehaviour
     }
 }
 
-    //public void Attack()
-    //{
-    //    //Debug.Log("Enemy attacked");
 
-    //    time = 0f;
-
-    //    if(player1.GetComponent<HealthScript>().currentHealth > 0)
-    //    {
-    //        //playerScript.TakeDamage(attackDmg);
-    //        player1.GetComponent<HealthScript>().TakeDamage(attackDmg);
-    //    }
-
-    //    if(armorScript.currentHP > 0)
-    //    {
-    //        armorScript.TakeDmg(attackDmg);
-    //    }
-    //}
 

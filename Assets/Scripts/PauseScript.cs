@@ -12,6 +12,7 @@ public class PauseScript : MonoBehaviour {
 	void Start ()
     {//Sets paused bool to false
         paused = false;
+        
 	}
 	
 	// Update is called once per frame
@@ -22,16 +23,17 @@ public class PauseScript : MonoBehaviour {
         {//Made a toggle
             //paused variable is now set to the opposite of what it was before the space bar was pressed
             paused = !paused;
+            //print PAUSE to the screen
+            pauseText.text = "     PAUSE";
         }
      //if paused is true..
-     if (paused == true)
-        {//print PAUSE to the screen
-            pauseText.text = "PAUSE";
+     if (paused)
+        {
             //Pause the game
             Time.timeScale = 0;
         }
      //If paused is set to false
-     else if (paused == false)
+     else if (!paused)
         {//Print nothing to the screen
             pauseText.text = "";
             //Set the game back to real time(unpaused)

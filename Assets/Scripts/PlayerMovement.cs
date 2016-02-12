@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
     //Animator anim;          
     Vector3 playerMoves;            
     Rigidbody rbody;          
-    int floorMask;                     
+    //int floorMask;                     
     float camRayLength = 100f;          
 
     void Start()
     {
         
-        floorMask = LayerMask.GetMask("Floor");
+        //floorMask = LayerMask.GetMask("Floor");
         //anim = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody>();
     }
@@ -45,14 +45,14 @@ public class PlayerMovement : MonoBehaviour
     {
   
 
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Quaternion TurnsAround = transform.rotation;
-            TurnsAround.y = 90f;
-            transform.rotation = TurnsAround;
+        //if (Input.GetKey(KeyCode.DownArrow))
+        //{
+        //    Quaternion TurnsAround = transform.rotation;
+        //    TurnsAround.y = 90f;
+        //    transform.rotation = TurnsAround;
 
             
-        }
+        
     }
 
 //    void Animating(float h, float v)
