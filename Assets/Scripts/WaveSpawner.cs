@@ -31,7 +31,7 @@ public class WaveSpawner : MonoBehaviour {
     public Wave[] waves;
 
     //Stores the index of the wave we want to be creating next
-    private int nextWave = 1;
+    private int nextWave = 0;
 
     //Spawnpoint Locations
     public Transform[] spawnPoints;
@@ -62,17 +62,18 @@ public class WaveSpawner : MonoBehaviour {
     {
         //Display this text
         numWave.text = "Wave: " + nextWave;
+
         if (state == SpawnState.WAITING)
         {//Check to see if enemies are still alive
 
             //If no enemeies are alive...
-            if(!EnemyIsAlive())
+            if (!EnemyIsAlive())
             {
-                //Display this text
-                numWave.text = "Wave: " + nextWave;
                 //Begin a new round
                 WaveCompleted();
-                
+                //Display this text
+                numWave.text = "Wave: " + nextWave;
+
             }
             else
             {//If enemies are still alive
