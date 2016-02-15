@@ -5,7 +5,7 @@ using System.Collections;
 public class WaveSpawner : MonoBehaviour {
 
 
-    public enum SpawnState { SPAWNING, WAITING, COUTNING};
+    public enum SpawnState { SPAWNING, WAITING, COUNTING};
 
     //This allows you to interact with the script data inside the inspector in unity
 	[System.Serializable]
@@ -24,14 +24,17 @@ public class WaveSpawner : MonoBehaviour {
 
     }
 
-    //Print the wave number to the screen
-    public Text numWave;
+    //Store the wave number
+    public Text disWave;
 
     //Array of waves
     public Wave[] waves;
 
     //Stores the index of the wave we want to be creating next
     private int nextWave = 0;
+
+    //Stores the current wave number to be displayed to the screen
+    private int waveNum = 1;
 
     //Spawnpoint Locations
     public Transform[] spawnPoints;
@@ -46,7 +49,7 @@ public class WaveSpawner : MonoBehaviour {
     private float searchCountdown = 1f;
 
 
-    private SpawnState state = SpawnState.COUTNING;
+    private SpawnState state = SpawnState.COUNTING;
 
     // Use this for initialization
 	void Start ()
@@ -61,7 +64,7 @@ public class WaveSpawner : MonoBehaviour {
 	void Update ()
     {
         //Display this text
-        numWave.text = "Wave: " + nextWave;
+        disWave.text = "Wave: " + waveNum;
 
         if (state == SpawnState.WAITING)
         {//Check to see if enemies are still alive
@@ -71,14 +74,12 @@ public class WaveSpawner : MonoBehaviour {
             {
                 //Begin a new round
                 WaveCompleted();
-                //Display this text
-                numWave.text = "Wave: " + nextWave;
 
             }
             else
             {//If enemies are still alive
                 //Display this text
-                numWave.text = "";
+                disWave.text = "";
                 return;
             }
 
@@ -107,7 +108,7 @@ public class WaveSpawner : MonoBehaviour {
     void WaveCompleted()
     {
         //Set the state to start counting down til next wave
-        state = SpawnState.COUTNING;
+        state = SpawnState.COUNTING;
         //Sets countdown to the time between waves
         waveCountdown = timeBetweenWaves;
 
@@ -120,7 +121,7 @@ public class WaveSpawner : MonoBehaviour {
         {
             //Next wave
             nextWave++;
-            
+            waveNum++;
 
         }
 
