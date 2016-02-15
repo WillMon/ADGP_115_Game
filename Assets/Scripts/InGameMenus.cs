@@ -35,6 +35,7 @@ public class InGameMenus : MonoBehaviour {
     public void ExitGame()
     {
         Application.Quit();
+
     }
 
     // Update is called once per frame

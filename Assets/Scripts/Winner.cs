@@ -62,4 +62,10 @@ public class Winner : MonoBehaviour
 
     }
 
+    public void GoBack()
+    {
+        Application.LoadLevel(0);
+
+    }
+
 }

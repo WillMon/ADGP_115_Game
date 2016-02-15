@@ -7,12 +7,15 @@ public class PauseScript : MonoBehaviour {
     //Create Variables
     public bool paused;
     public Text pauseText;
+    public Canvas MainMenu;
 
 	// Use this for initialization
 	void Start ()
     {//Sets paused bool to false
         paused = false;
-        
+        //Enable 
+        MainMenu = MainMenu.GetComponent<Canvas>();
+        MainMenu.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,6 +32,7 @@ public class PauseScript : MonoBehaviour {
      //if paused is true..
      if (paused)
         {
+            MainMenu.enabled = true;
             //Pause the game
             Time.timeScale = 0;
         }
@@ -38,6 +42,8 @@ public class PauseScript : MonoBehaviour {
             pauseText.text = "";
             //Set the game back to real time(unpaused)
             Time.timeScale = 1;
+            //Disables the MainMenu button
+            MainMenu.enabled = false;
         }
 	}
 }
