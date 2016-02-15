@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class WaveSpawner : MonoBehaviour {
@@ -23,11 +24,14 @@ public class WaveSpawner : MonoBehaviour {
 
     }
 
+    //Print the wave number to the screen
+    public Text numWave;
+
     //Array of waves
     public Wave[] waves;
 
     //Stores the index of the wave we want to be creating next
-    private int nextWave = 0;
+    private int nextWave = 1;
 
     //Spawnpoint Locations
     public Transform[] spawnPoints;
@@ -47,26 +51,33 @@ public class WaveSpawner : MonoBehaviour {
     // Use this for initialization
 	void Start ()
     {
+        
         //Sets wave countdown to time between waves
         waveCountdown = timeBetweenWaves;
-
-	}
+      
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-
-        if(state == SpawnState.WAITING)
+        //Display this text
+        numWave.text = "Wave: " + nextWave;
+        if (state == SpawnState.WAITING)
         {//Check to see if enemies are still alive
 
-            //If no emeies are alive...
+            //If no enemeies are alive...
             if(!EnemyIsAlive())
             {
+                //Display this text
+                numWave.text = "Wave: " + nextWave;
                 //Begin a new round
                 WaveCompleted();
+                
             }
             else
             {//If enemies are still alive
+                //Display this text
+                numWave.text = "";
                 return;
             }
 
@@ -108,6 +119,8 @@ public class WaveSpawner : MonoBehaviour {
         {
             //Next wave
             nextWave++;
+            
+
         }
 
     }
