@@ -252,11 +252,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -265,10 +265,74 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PA_Warrior
+        weight: 1
+      - path: PA_WarriorControl
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtFrontLeg1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtFrontLeg1/PA_WarriorLtFrontLeg2
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtFrontLeg1/PA_WarriorLtFrontLeg2/PA_WarriorLtFrontLeg3
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtFrontLeg1/PA_WarriorLtFrontLeg2/PA_WarriorLtFrontLeg3/swarmWarriorLtFrontLeg4
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtFrontLeg1/PA_WarriorLtFrontLeg2/PA_WarriorLtFrontLeg3/swarmWarriorLtFrontLeg4/swarmWarriorLtFrontLeg5
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtRearLeg1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtRearLeg1/PA_WarriorLtRearLeg2
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtRearLeg1/PA_WarriorLtRearLeg2/swarmWarriorLtRearLeg3
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtRearLeg1/PA_WarriorLtRearLeg2/swarmWarriorLtRearLeg3/swarmWarriorLtRearLeg4
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorLtRearLeg1/PA_WarriorLtRearLeg2/swarmWarriorLtRearLeg3/swarmWarriorLtRearLeg4/swarmWarriorLtRearLeg5
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtFrontLeg1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtFrontLeg1/PA_WarriorRtFrontLeg2
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtFrontLeg1/PA_WarriorRtFrontLeg2/swarmWarriorRtFrontLeg3
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtFrontLeg1/PA_WarriorRtFrontLeg2/swarmWarriorRtFrontLeg3/swarmWarriorRtFrontLeg4
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtFrontLeg1/PA_WarriorRtFrontLeg2/swarmWarriorRtFrontLeg3/swarmWarriorRtFrontLeg4/swarmWarriorRtFrontLeg5
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtRearLeg1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtRearLeg1/PA_WarriorRtRearLeg2
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtRearLeg1/PA_WarriorRtRearLeg2/swarmWarriorRtRearLeg3
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtRearLeg1/PA_WarriorRtRearLeg2/swarmWarriorRtRearLeg3/swarmWarriorRtRearLeg4
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorRtRearLeg1/PA_WarriorRtRearLeg2/swarmWarriorRtRearLeg3/swarmWarriorRtRearLeg4/swarmWarriorRtRearLeg5
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorTail1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorTail1/PA_WarriorTail2
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorTail1/PA_WarriorTail2/PA_WarriorTail3
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorTail1/PA_WarriorTail2/PA_WarriorTail3/PA_WarriorTail4
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorTail1/PA_WarriorTail2/PA_WarriorTail3/PA_WarriorTail4/PA_WarriorTail5
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorWeapon1
+        weight: 1
+      - path: PA_WarriorControl/PA_WarriorRoot/PA_WarriorBody/PA_WarriorWeapon1/PA_WarriorWeapon2
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
       name: PA_WarriorAttack_Clip
       takeName: Take 001
@@ -415,7 +479,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: PA_WarriorRoot
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
