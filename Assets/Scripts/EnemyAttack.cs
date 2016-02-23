@@ -14,9 +14,9 @@ public class EnemyAttack : MonoBehaviour
 
     WallHealth armorScript;
     HealthScript playerScript;
-    EnemyHealth enemyScript;
+    public EnemyHealth enemyScript;
 
-    //Animator anim;
+    public Animator anim;
 
     bool playerInRange1;
     bool playerInRange2;
@@ -36,7 +36,7 @@ public class EnemyAttack : MonoBehaviour
         playerScript = gameObject.GetComponent<HealthScript>();
         enemyScript = gameObject.GetComponent<EnemyHealth>();
         armorScript = gameObject.GetComponent<WallHealth>();
-        //anim = GetComponent<Animator>()
+        anim = GetComponent<Animator>();
 
     }
 
@@ -65,18 +65,30 @@ public class EnemyAttack : MonoBehaviour
         if (collision.gameObject == player1)
         {
             playerInRange1 = true;
+            Debug.Log("Hit");
+            //anim.Play("PA_WarriorAttack_Clip", -1, 0f);
+            //anim.SetTrigger("attack");
+            anim.SetBool("atk", true);
         }
         if (collision.gameObject == player2)
         {
             playerInRange2 = true;
+            //anim.SetTrigger("attack");
+            anim.SetBool("atk", true);
         }
         if (collision.gameObject == Wall1)
         {
             WallInRange1 = true;
+            //anim.SetTrigger("attack");
+            anim.SetBool("atk", true);
+
         }
         if (collision.gameObject == Wall2)
         {
             WallInRange2 = true;
+            //anim.SetTrigger("attack");
+            anim.SetBool("atk", true);
+
         }
     }
     // Update is called once per frame
